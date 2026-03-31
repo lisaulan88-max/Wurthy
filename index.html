@@ -120,12 +120,17 @@
     }
 
     .card {
-      background: rgba(255, 255, 255, 0.88);
-      padding: 20px;
+      background: white;
+      padding: 25px;
       border-radius: 20px;
-      border: 1px solid #f3d7df;
-      box-shadow: 0 8px 24px rgba(214, 170, 182, 0.12);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+      margin-bottom: 20px;
       text-align: left;
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
     }
 
     input {
