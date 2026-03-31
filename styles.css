@@ -37,6 +37,37 @@ section {
   text-align: center;
 }
 
+.hero {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.hero-copy h1 {
+  font-size: 2.5rem;
+  color: #b03060;
+  margin-bottom: 12px;
+}
+
+.hero-copy p {
+  font-size: 1.1rem;
+  max-width: 640px;
+  margin: 0 auto 20px;
+}
+
+button {
+  background: #d63384;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 999px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #b03060;
+}
+
 .card {
   background: #fce4ec;
   margin: 15px auto;
