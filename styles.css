@@ -68,6 +68,22 @@ button:hover {
   background: #b03060;
 }
 
+.signup-form {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 18px;
+}
+
+.signup-form input {
+  padding: 12px 16px;
+  border: 2px solid #f8bbd9;
+  border-radius: 999px;
+  min-width: 260px;
+  font-size: 1rem;
+}
+
 .card {
   background: #fce4ec;
   margin: 15px auto;
