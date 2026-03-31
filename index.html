@@ -2,95 +2,153 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>wURthy — You Are Worthy</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>wURthy</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #fdf8f7;
+      color: #2d2d2d;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+      margin: 0 0 20px;
+    }
+
+    section {
+      padding: 80px 20px;
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .hero {
+      background: #f7e9e6;
+      padding: 120px 20px;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      background: #e8b4b8;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 30px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .video iframe {
+      width: 100%;
+      max-width: 600px;
+      height: 315px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+      text-align: left;
+    }
+
+    input {
+      padding: 12px;
+      border-radius: 20px;
+      border: 1px solid #ddd;
+      width: 70%;
+      margin-right: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 14px;
+      color: #777;
+    }
+  </style>
 </head>
+
 <body>
 
-<header>
-  <h1>wURthy</h1>
-  <p class="tagline">You Are Worthy</p>
-</header>
-
-<nav>
-  <a href="#home">Home</a>
-  <a href="#tips">Dating Tips</a>
-  <a href="#videos">Videos</a>
-  <a href="#about">About</a>
-</nav>
-
-<section id="home" class="hero">
-  <div class="hero-copy">
+  <!-- HERO -->
+  <section class="hero">
     <h1>Stop Chasing. Start Attracting.</h1>
-    <p>Dating advice for women who want real confidence, real standards, and real relationships.</p>
-    <button type="button" onclick="location.href='#tips'">Start Here</button>
-    <div class="signup-form">
-      <input type="email" placeholder="Enter your email">
-      <button type="button">Join wURthy</button>
+    <p>Helping women build confidence, set standards, and attract the relationships they deserve.</p>
+    <button class="btn">Start Your Journey</button>
+  </section>
+
+  <!-- VIDEO -->
+  <section class="video">
+    <h2>Start Here</h2>
+    <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID"></iframe>
+  </section>
+
+  <!-- ABOUT -->
+  <section>
+    <h2>About wURthy</h2>
+    <p>
+      I created wURthy because I was tired of overthinking, overgiving, and attracting the wrong men.
+      This is a space for women who are ready to step into confidence, stop settling, and feel truly worthy.
+    </p>
+  </section>
+
+  <!-- CONTENT -->
+  <section>
+    <h2>What You Need to Know</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>1. Too Much Effort Backfires</h3>
+        <p>Authenticity is more attractive than perfection.</p>
+      </div>
+
+      <div class="card">
+        <h3>2. Attraction Isn’t About Trying Harder</h3>
+        <p>It’s about showing up as your real self.</p>
+      </div>
+
+      <div class="card">
+        <h3>3. Confidence Changes Everything</h3>
+        <p>The right energy attracts the right person.</p>
+      </div>
     </div>
-  </div>
-  <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8aGFwcHklMjBjb3VwbGV8ZW58MHx8MHx8fDA%3D" alt="Happy couple with a joyful woman">
-</section>
+  </section>
 
-<section id="tips">
-  <h2>Dating Tips</h2>
-  <div class="card">
-    <h3>Know Your Worth</h3>
-    <p>Never chase—attract. The right person will meet you at your level.</p>
-  </div>
-  <div class="card">
-    <h3>Set Boundaries Early</h3>
-    <p>Boundaries create respect. Enforce them without apologizing.</p>
-  </div>
-  <div class="card">
-    <h3>Don’t Ignore Red Flags</h3>
-    <p>If something feels off early, it usually is.</p>
-  </div>
-</section>
+  <!-- EMAIL -->
+  <section>
+    <h2>Join wURthy</h2>
+    <p>Get advice, insights, and confidence delivered to you.</p>
+    <input type="email" placeholder="Enter your email">
+    <button class="btn">Join</button>
+  </section>
 
-<section id="videos">
-  <h2>Video Advice</h2>
-  
-  <div class="video-container">
-    <iframe src="https://www.youtube.com/embed/VIDEO_ID"
-      title="Dating Advice Video"
-      frameborder="0"
-      allowfullscreen></iframe>
-  </div>
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 wURthy. You are worthy.</p>
+  </footer>
 
-  <div class="video-container">
-    <iframe src="https://www.youtube.com/embed/VIDEO_ID"
-      title="Dating Advice Video"
-      frameborder="0"
-      allowfullscreen></iframe>
-  </div>
-
-  <div class="video-container">
-    <iframe src="https://claude.ai/public/artifacts/a62ad4d6-2eaf-4680-8437-361280f2ebb4"
-      title="Embedded Video"
-      frameborder="0"
-      allowfullscreen></iframe>
-  </div>
-
-  <div class="video-container">
-    <iframe src="https://www.youtube.com/embed/Ns1QpSGImac"
-      title="Dating Advice Video"
-      frameborder="0"
-      allowfullscreen></iframe>
-  </div>
-
-  <p class="note">Replace VIDEO_ID with your YouTube video IDs.</p>
-</section>
-
-<section id="about">
-  <h2>About wURthy</h2>
-  <p>wURthy is a dating platform built to remind women that they are worthy of love and respect</p>
-</section>
-
-<footer>
-  <p>© 2026 wURthy</p>
-</footer>
-
-<script src="script.js"></script>
 </body>
 </html>
