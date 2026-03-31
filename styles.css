@@ -2,6 +2,7 @@
    wURthy — Main Stylesheet
    Accessibility: WCAG AA colour contrast, focus states,
    form validation feedback, ARIA live-region support.
+   Mobile-first responsive layout.
    ========================================================= */
 
 /* ----- Reset / Base ----- */
@@ -28,9 +29,15 @@ section {
 /* ----- Hero ----- */
 .hero {
   background: linear-gradient(180deg, #fdeff3 0%, #fbe6ec 100%);
-  padding: 120px 20px;
+  padding: 80px 20px;
   border-bottom-left-radius: 36px;
   border-bottom-right-radius: 36px;
+}
+
+@media (min-width: 600px) {
+  .hero {
+    padding: 120px 20px;
+  }
 }
 
 .brand-logo {
@@ -81,31 +88,38 @@ section {
   color: #5b4b52;
 }
 
+/* Fluid hero heading: scales from 32 px on small screens to 56 px on large */
 .hero h1 {
-  font-size: 48px;
+  font-size: clamp(2rem, 5vw + 1rem, 3.5rem);
 }
 
 .hero p {
-  font-size: 18px;
+  font-size: clamp(1rem, 2vw + 0.5rem, 1.2rem);
   margin-bottom: 30px;
 }
 
 /* ----- Buttons ----- */
 .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px; /* WCAG 2.5.5 touch target */
   background: linear-gradient(135deg, #eeb8c4, #d990a2);
   color: white;
-  padding: 12px 24px;
+  padding: 12px 28px;
   border: none;
   border-radius: 30px;
   font-size: 16px;
   cursor: pointer;
   box-shadow: 0 10px 22px rgba(217, 144, 162, 0.25);
-  transition: background 0.2s ease, box-shadow 0.2s ease;
+  transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.15s ease;
+  text-decoration: none;
 }
 
 .btn:hover {
   background: linear-gradient(135deg, #d990a2, #c4607a);
   box-shadow: 0 12px 28px rgba(196, 96, 122, 0.35);
+  transform: translateY(-1px);
 }
 
 /* Visible focus indicator — min 2 px, high contrast */
@@ -131,13 +145,33 @@ section {
   margin-top: 40px;
 }
 
+/* 2 columns on tablet */
+@media (min-width: 600px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 3 columns on desktop */
+@media (min-width: 768px) {
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 .card {
   background: rgba(255, 255, 255, 0.88);
-  padding: 20px;
+  padding: 24px 20px;
   border-radius: 20px;
   border: 1px solid #f3d7df;
   box-shadow: 0 8px 24px rgba(214, 170, 182, 0.12);
   text-align: left;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(183, 110, 121, 0.2);
 }
 
 /* ----- Email Sign-up Form ----- */
