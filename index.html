@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>wURthy</title>
+  <title>wURthy — You are worthy</title>
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
@@ -31,6 +31,47 @@
     .hero {
       background: #f7e9e6;
       padding: 120px 20px;
+    }
+
+    .brand-logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 24px;
+      padding: 10px 18px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.8);
+      box-shadow: 0 8px 24px rgba(190, 120, 140, 0.12);
+    }
+
+    .brand-logo-mark {
+      display: inline-grid;
+      place-items: center;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #f4c2c7, #d98fa0);
+      color: white;
+      font-size: 20px;
+    }
+
+    .brand-logo-text {
+      text-align: left;
+    }
+
+    .brand-logo-text strong {
+      display: block;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      color: #b76e79;
+      letter-spacing: 0.04em;
+    }
+
+    .brand-logo-text span {
+      font-size: 0.8rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #7a5c61;
     }
 
     .hero h1 {
@@ -96,6 +137,13 @@
 
   <!-- HERO -->
   <section class="hero">
+    <div class="brand-logo" aria-label="wURthy logo">
+      <span class="brand-logo-mark">✿</span>
+      <div class="brand-logo-text">
+        <strong>wURthy</strong>
+        <span>You are worthy</span>
+      </div>
+    </div>
     <h1>Stop Chasing. Start Attracting.</h1>
     <p>Helping women build confidence, set standards, and attract the relationships they deserve.</p>
     <button class="btn">Start Your Journey</button>
